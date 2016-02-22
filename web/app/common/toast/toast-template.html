@@ -1,0 +1,33 @@
+<style>
+	#message {}
+	
+	#success {
+		background-color: lightgreen;
+		color: green;
+	}
+	
+	#error {
+		background-color: darkred;
+		color: gray;
+	}
+	.toast-body{
+		width:auto;
+		max-width:none;
+		padding-right:0px;
+	}
+</style>
+
+
+<md-toast class="taost-body">
+	<div>
+		<span flex id="{{appService().toastDetails.type}}">{{appService().toastDetails.message}}</span>
+		<md-button class="md-icon-button" ng-click="closeToast()">
+			<md-icon md-font-icon="fa fa-close fa-lg"></md-icon>
+		</md-button>
+
+	</div>
+</md-toast>
+
+<script>
+    alert("here");
+    </script>

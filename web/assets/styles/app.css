@@ -1,0 +1,184 @@
+body{
+    font-family: Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.landing {
+    background-image: url('../images/header-bg.png');
+    background-color: #039BE5;
+}
+.custom-error{
+    color:#F44336;
+    font-size: 12px;
+    line-height: 14px;
+    overflow: hidden;
+    margin-top: 5px;
+    opacity: 1; 
+}
+.fab-fixed-float {
+    position:absolute;
+    right: 18px;
+    top: 100px;
+}
+.side-nav-header {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    height: 200px;
+    color: #fff;
+}
+.header {
+    height: 140px;
+    min-height: 140px;
+    max-height: 140px;
+    padding: 24px;
+    margin:-16px;
+    background-image: url('../images/header-bg.png');
+    background-size: cover;
+}
+.title {
+    font-size: 34px;
+    color: #fff;
+}
+.secondary-text {
+    color: rgba(0, 0, 0, 0.541176);
+    font-size: 13px;
+    letter-spacing: -0.1px;
+    line-height: 18.2px;
+}
+.breadcrumb {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-rendering: optimizeLegibility;
+    color: rgba(0, 0, 0, 0.541176);
+}
+.blue {
+    background-color: #039BE5;
+}
+.green {
+    background-color: #a3c82b;
+}
+.widget-group {
+    margin-top: 15px;
+}
+.widget {
+    padding: 16px;
+}
+.widget_icon_white {
+    font-size: 48px!important;
+    width: 48px!important;
+    height: 48px!important;
+    line-height: 48px!important;
+    color: white;
+}
+.widget_icon_gray {
+    font-size: 48px!important;
+    width: 48px!important;
+    height: 48px!important;
+    line-height: 48px!important;
+    color: rgba(0,0,0,0.26);
+}
+.widget_icon_light {
+    font-size: 40px!important;
+    width: 40px!important;
+    height: 40px!important;
+    line-height: 40px!important;
+    color: rgba(255, 255, 255, 0.701961);
+}
+.widget_heading_light {
+    color: rgba(255, 255, 255, 0.701961);
+    font-weight: 500;
+    font-size: 14px;
+}
+.widget_content_light {
+    color: white;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.form-title {
+    font-size: 21px;
+}
+.badge {
+    position: relative;
+    top: -20px;
+    right: 0px;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 7px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.701961);
+}
+.tweet_user {
+    font-size: 12px;
+}
+
+
+/**** Anim ****/
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+   -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
+/**** Scroll ****/
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.3); 
+}

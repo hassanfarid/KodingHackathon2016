@@ -1,0 +1,64 @@
+<div class="header green md-accent-bg layout-align-space-between-stretch layout-row" layout="row" layout-align="space-between">
+    <div layout="column" layout-align="center start" class="layout-align-center-start layout-column">
+        <div class="breadcrumb layout-align-start-center layout-row" layout="row" layout-align="start center">
+            <md-icon md-font-set="material-icons"> home</md-icon>
+            <md-icon md-font-set="material-icons"> chevron_right</md-icon>
+            <md-icon md-font-icon="icon-chevron-right" class="s16 separator md-font icon-chevron-right material-icons md-default-theme"
+            aria-hidden="true"></md-icon>
+            <div class="parent">EVENT</div>
+        </div>
+        <div class="title">Manage Event</div>
+    </div>
+</div>
+
+<md-card style="margin-top:-5px;">
+    <md-content style="padding:16px;">
+        <form name="eventForm" class="md-inline-form ng-pristine ms-form-wizard-form ng-scope ng-invalid ng-invalid-required ng-valid-email ng-valid-pattern"
+        ms-form-wizard-form="" novalidate="">
+            <div class="form-title">Event Details</div>
+            <div layout="column" layout-gt-xs="row" flex="" class="layout-gt-xs-row layout-column flex">
+                <md-input-container flex="100" flex-gt-xs="50" class="md-icon-float flex-gt-xs-50 flex-100 md-default-theme ng-animate md-input-invalid"
+                data-ng-animate="2">
+                    <label ng-click="delegateClick()">Event Name</label>
+                    <input type="text" name="eventName" ng-model="event.eventName" required="" class="ng-pristine md-input ng-invalid ng-invalid-required ng-touched"
+                    aria-label="Event Name" id="input_206" aria-required="true" aria-invalid="true">
+                    <div class="md-errors-spacer"></div>
+                    <div ng-messages="eventForm.eventName.$error" ng-show="eventForm.eventName.$touched" role="alert" class="md-input-messages-animation ng-active"
+                    aria-live="assertive" aria-hidden="false">
+                        <!-- ngMessage: required -->
+                        <div ng-message="required" class="md-input-message-animation ng-scope" style="opacity: 1; margin-top: 0px;"><span>Event Name is required.</span></div>
+                    </div>
+                </md-input-container>
+                <md-chips flex="100" flex-gt-xs="50" ng-model="event.hashTag" id="hashTags" name="hashTags" placeholder="Enter Hash Tags"
+                delete-button-label="Remove Hash Tag" delete-hint="Press delete to remove Hash Tag" secondary-placeholder="+Hash Tag"
+                ng-required="true">
+                    <md-chip-template>
+                        <strong>#{{$chip}}</strong>
+                    </md-chip-template>
+                </md-chips>
+
+                <div role="alert" class="md-input-messages-animation ng-active" aria-live="assertive"
+                aria-hidden="false">
+                    <div class="custom-error md-input-message-animation ng-scope" ng-show="event.hashTags.length == 0">
+                        Atleast one event hash tag is required.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-title">Dimensions</div>
+            <md-chips ng-model="event.dimensions" placeholder="Enter a dimension" delete-button-label="Remove dimension" delete-hint="Press delete to remove dimension"
+            secondary-placeholder="+Dimension"></md-chips>
+            <br/>
+            <div class="form-title">Ignore Content</div>
+            <md-chips ng-model="event.ignore" placeholder="Enter a ignore item" delete-button-label="Remove ignore item" delete-hint="Press delete to remove ignore item"
+            secondary-placeholder="+Ignore"></md-chips>
+
+            <br/>
+            <button class="md-raised md-accent md-button md-ink-ripple md-default-theme" type="button" aria-label="Submit" ng-disabled="eventForm.$invalid || event.hashTags.length == 0"
+            aria-disabled="true" ng-click="save()">
+                <span class="ng-scope">Save and View Dashboard</span>
+            </button>
+        </form>
+    </md-content>
+</md-card>
